@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #4a148c;
+}
+
+/* ===== Part 1: CSS Transitions ===== */
+.fancy-btn {
+  padding: 10px 20px;
+  background: #6200ea;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.fancy-btn:hover {
+  background-color: #b388ff;
+  transform: scale(1.1);
+}
+
+/* Keyframe animation example */
+.animated-box {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  background: coral;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background: coral; }
+  50% { transform: scale(1.2); background: tomato; }
+  100% { transform: scale(1); background: coral; }
+}
+
+/* ===== Part 3: CSS + JS Integration ===== */
+.magic-box {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  background: teal;
+  transition: transform 1s ease, background 1s ease;
+}
+
+.magic-box.active {
+  transform: rotate(360deg) scale(1.5);
+  background: gold;
+}
